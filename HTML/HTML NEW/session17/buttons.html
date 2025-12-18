@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            padding:20px ;
+            transition:all 0.5 ease ;
+            background-color:blue ;
+            border:none ;
+            font-size: 30px;
+
+
+        }
+        .btn:hover{
+            background-color:red ;
+            transform: scale(1.1);
+        }
+        .btn:focus{
+           border: 3px solid black;
+        }
+        .btn:active{
+            transform: scale(2);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>interactive buttons</h1>
+    <button class="btn">click me</button>
+    <button class="btn">hover button</button>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gmail Clone</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f1f3f4; }
+
+    /* Header */
+    .header {
+      height: 64px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo { font-size: 22px; font-weight: bold; color: #d93025; margin-right: 20px; }
+    .search {
+      flex: 1;
+      max-width: 700px;
+      background: #f1f3f4;
+      border-radius: 24px;
+      padding: 10px 16px;
+      border: none;
+      outline: none;
+    }
+
+    /* Layout */
+    .container { display: flex; height: calc(100vh - 64px); }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 12px;
+    }
+    .compose {
+      background: #c2e7ff;
+      border-radius: 24px;
+      padding: 12px;
+      margin-bottom: 16px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .menu div {
+      padding: 10px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .menu div:hover { background: #f1f3f4; }
+
+    /* Mail List */
+    .mail-list {
+      flex: 1;
+      background: #ffffff;
+      overflow-y: auto;
+    }
+    .mail {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    .mail:hover { background: #f6f8fc; }
+    .sender { width: 180px; font-weight: bold; }
+    .subject { flex: 1; color: #555; }
+    .time { width: 80px; text-align: right; color: #777; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">Gmail</div>
+    <input class="search" type="text" placeholder="Search mail" />
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="compose">+ Compose</div>
+      <div class="menu">
+        <div>Inbox</div>
+        <div>Starred</div>
+        <div>Snoozed</div>
+        <div>Sent</div>
+        <div>Drafts</div>
+      </div>
+    </div>
+
+    <!-- Mail List -->
+    <div class="mail-list">
+      <div class="mail">
+        <div class="sender">Google</div>
+        <div class="subject">Security alert – New sign-in detected</div>
+        <div class="time">10:30 AM</div>
+      </div>
+      <div class="mail">
+        <div class="sender">LinkedIn</div>
+        <div class="subject">You appeared in 5 searches this week</div>
+        <div class="time">9:12 AM</div>
+      </div>
+      <div class="mail">
+        <div class="sender">GitHub</div>
+        <div class="subject">New login from Chrome on Mac</div>
+        <div class="time">Yesterday</div>
+      </div>
+      <div class="mail">
+        <div class="sender">Amazon</div>
+        <div class="subject">Your order has been shipped</div>
+        <div class="time">Yesterday</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
